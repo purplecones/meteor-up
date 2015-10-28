@@ -56,6 +56,7 @@ You can use install and use Meteor Up from Linux, Mac and Windows.
 * Revert to the previous version, if the deployment failed
 * Secured MongoDB Installation (Optional)
 * Pre-Installed PhantomJS (Optional)
+* Pre-Installed wkhtmltopdf (Optional)
 
 ### Installation
 
@@ -104,6 +105,9 @@ This will create two files in your Meteor Up project directory:
 
   // Install PhantomJS on the server
   "setupPhantom": true,
+
+  // Install wkhtmltopdf on the server
+  "setupWkhtmltopdf": true,
 
   // Show a progress bar during the upload of the bundle to the server.
   // Might cause an error in some rare cases if set to true, for instance in Shippable CI
@@ -187,7 +191,7 @@ And you also need to add NOPASSWD to the sudoers file:
     %sudo  ALL=(ALL) ALL
 
     # by this line
-    %sudo ALL=(ALL) NOPASSWD:ALL  
+    %sudo ALL=(ALL) NOPASSWD:ALL
 
 When this process is not working you might encounter the following error:
 
